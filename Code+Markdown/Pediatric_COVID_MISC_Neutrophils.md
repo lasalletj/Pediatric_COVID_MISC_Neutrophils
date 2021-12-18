@@ -605,7 +605,7 @@ allgenesetfgseaResordered$sign <- allgenesetfgseaResordered$NES > 0
 allgenesetfgseaResordered$sign <- mapvalues(allgenesetfgseaResordered$sign, from = c("FALSE","TRUE"), to = c("Healthy","COVID"))
 ```
 
-**Figure 2B:**
+**Figure 3B:**
 
 ``` r
 ggplot(allgenesetfgseaResordered, aes(x = factor(idx), y = NES)) + geom_col(aes(fill = sign)) + coord_flip() + theme_bw() + theme(panel.grid = element_blank()) + scale_fill_manual(values = c(misc, well))
